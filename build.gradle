@@ -34,3 +34,8 @@ dependencies {
 war {
 	archiveName = 'mywebapp.war'
 }
+
+task deployToTomcat(type: Copy, dependsOn: 'war') {
+	from war.archivePath
+	into '../webapps'
+}
