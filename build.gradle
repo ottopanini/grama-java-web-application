@@ -1,5 +1,6 @@
 plugins {
   id 'java'
+  id 'war'
 }
 
 group = 'com.denofprogramming'
@@ -30,4 +31,6 @@ dependencies {
 
 }
 
-
+war {
+	archiveName = 'mywebapp.war'
+}
